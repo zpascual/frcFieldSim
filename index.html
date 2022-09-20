@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Field Simulator</title>
+	<link href="field.css" type="text/css" rel="stylesheet">
+	<link href="trackable.css" type="text/css" rel="stylesheet">
+	<link href="module_hijack.css" type="text/css" rel="stylesheet">
+	<script src="/networktables/networktables.js"></script>
+	<script src="jquery-3.2.1.js"></script>
+	<script src="rainbow.js"></script>
+	<script src="util.js"></script>
+</head>
+<body>
+	<div id="field" class="field">
+	<img id="fieldImg" class="field" src="field.png">
+	<!--<div id="negYWall" class="wall"></div>-->
+	<!--<div id="posYWall" class="wall"></div>-->
+	</div>
+	<div id="trackables"></div>
+	<div id="traceables"></div>
+	<div id="shadowbot-container">
+	</div>
+	<!--div id="data">
+		Current: (<span id="posX"></span>, <span id="posY"></span>, <span id="posT"></span>)
+		<input type="button" id="saveAuto" value="Save Auto">
+		<input type="button" id="saveTele" value="Save Tele">
+	</div>
+	<div id="circles"></div-->
+	<script src="Trackable.js"></script>
+	<script src="Traceable.js"></script>
+	<script src="geometry.js"></script>
+	<script src="landmarks.js"></script>
+	<script src="plot.js"></script>
+	<script src="robot.js"></script>
+	
+	<!--img src="http://10.93.23.11:5800/stream.mjpg" id="video"-->
+	<input id="resetAll" class="reset" type="button" onclick="traceables.reset()" value="Clear All">
+	<input id="resetPath" class="reset" type="button" onclick="pathTracer.reset()" value="Clear Path">
+	<input id="resetAuto" class="reset" type="button" onclick="robotAutoTracer.reset()" value="Clear Auto">
+	<input id="resetTele" class="reset" type="button" onclick="robotTeleTracer.reset()" value="Clear Tele">
+	<input id="resetMod3" class="reset" type="button" onclick="mod3Tracer.reset()" value="Clear Mod3">
+	<!--<input id="importPath" class="reset" type="button" onclick="getClipboard()" value="Import Path">-->
+	<div id="pathCopier" style="display: inline-block;"></div>
+</body>
+</html>

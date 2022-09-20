@@ -1,0 +1,253 @@
+.nope {
+	display: none !important;
+}
+
+body {
+	margin: 324px 0 0 0;
+}
+
+#field, #robot, #robot::after, canvas {
+	user-select: none;
+}
+
+#field {
+	background: #2d2;
+	background: white;
+}
+
+.field {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0);
+	width: 648px;
+	height: 324px;
+}
+#robot, #pathHead {
+	border-color: #2222FF77;
+	border-width: 3.25px;
+	border-radius: 1.5px;
+}
+/*/
+#robot::after {
+    content: "frant";
+    font-family: sans-serif;
+    transform: rotate(-180deg);
+    position: absolute;
+    transform-origin: 50% 0%;
+    padding-top: 3.25px; /* bumper is 3.25" thicc *//*
+    background-color: rgba(0,127,127,0.5);
+	width: 100%;
+	height: 11px; /* intake extends 11" past bumper *//*
+    text-align: center;
+	font-size: 60%;
+}
+/**/
+#robot > .frant {
+    background-color: rgba(0,127,127,0.5);
+    width: 100%;
+    height: 11px;
+    top: calc(-11px + -3.25px);
+    transform: rotate(-180deg);
+    position: absolute;
+    font-family: sans-serif;
+    text-align: center;
+	font-size: 60%;
+}
+
+#vector {
+	border-width: 1.5px;
+	border-color: magenta;
+	transform-origin: inherit;
+}
+
+/*#pathHead {
+	display: none;
+}*/
+
+.shadowbot {
+    box-sizing: border-box;
+    transform-origin: 50% 50% 0px;
+    position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+#data {
+	margin: 1em;
+}
+#data > span {
+    box-sizing: border-box;
+    width: 4em;
+    padding-left: 0.25em;
+    display: inline-block;
+    background: lightgrey;
+}
+
+#data > input[type=button] {
+	margin-left: 0.5em;
+	
+}
+
+#circles {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 12em;
+}
+
+.point-data-container {
+	display: flex;
+}
+
+input.point-data {
+	width: 5em;
+}
+span.circle {
+    width: 1em;
+    height: 1em;
+    background-color: #0f0;
+    border-radius: 0.5em;
+    margin: 0.25em;
+}
+
+span.point-data {
+    margin: 0.175em;
+}
+
+.wall {
+	position: absolute;
+	width: 100%;
+	height: 0px;
+	box-sizing: border-box;
+	border: 0.5px dashed black;
+}
+#negYWall {
+/*	top: 16.25px; */
+	top: 0px;
+}
+#posYWall {
+	top: calc(303.13px - 16.25px);
+}
+img.field {
+    background: url(grid.png);
+    background-repeat: repeat;
+    background-size: 24px; /* 2ft */
+	background-position: center;
+}
+
+#video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 640px;
+    height: 480px;
+}
+
+.reset {
+    border-radius: 5px;
+    background-color: #05639e;
+    color: white;
+    border: none;
+    display: inline-block;
+}
+
+.reset:hover {
+    background-color: #4287f5;
+}
+
+.reset:active {
+    position: relative;
+    top: 1px;
+}
+
+.pointDescriptor {
+    height: 40px;
+    line-height: 40px;
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.pointText {
+    color: white;
+    display: inline-block;
+    margin: 0;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-right: 5px;
+}
+
+.descriptorField {
+    border-radius: 10px;
+    border: 0px;
+    background-color: #595c61;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.delete {
+    display: inline-block;
+    vertical-align: center;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+    height: 75%;
+    padding: 0px 10px 0px 10px;
+}
+
+.delete:hover {
+    background-color: white;
+    color: red;
+}
+
+.delete:active {
+    position: relative;
+    top: 1px;
+}
+
+.blueButton {
+    background-color: #5c39bd;
+}
+
+.blueButton:hover {
+    background-color: white; 
+    color: #5030ab;
+}
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    /*display: inline-block;*/
+  }
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
