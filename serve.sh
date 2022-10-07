@@ -1,1 +1,1 @@
-python3 -m networktables2js --robot 192.168.1.1
+python3 -m pynetworktables2js
