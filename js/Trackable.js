@@ -95,7 +95,7 @@ function Trackable(
 		$(t.elem).css({
 			"width":t.width(),
 			"height":t.height(),
-			"top":(-t.height())/2,
+			"top":(t.height())/2,
 			"left":(-t.width())/2
 		});
 //		console.log(t.translateX()+t.translateY()+t.rotateT());

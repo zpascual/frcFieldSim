@@ -11,8 +11,8 @@ var landmarks = {
     farShipPosition: new Pose2d(new Translation2d(304.3, -28.87), new Rotation2d(90.0))
 };
 
-var kRobotHalfLength = 36.5 / 2;
-var kRobotHalfWidth = 36.5 / 2;
+var kRobotHalfLength = 32 / 2;
+var kRobotHalfWidth = 32 / 2;
 
 var fieldPoses = {
     autoStartingPose: new Pose2d(new Translation2d(48.0 + kRobotHalfLength, 97.0 + kRobotHalfWidth - 162.0), new Rotation2d(-90)),
